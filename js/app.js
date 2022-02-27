@@ -1,5 +1,8 @@
 const allPlayers = () => {
+  document.getElementById("details-container").innerHTML = "";
   document.getElementById("player-container").innerHTML = "";
+  document.getElementById("male").style.display = "none";
+  document.getElementById("female").style.display = "none";
   document.getElementById("spinner").style.display = "block";
   const searchElement = document.getElementById("search-box");
   const searchValue = searchElement.value;
@@ -67,6 +70,7 @@ const setDetails = (info) => {
     document.getElementById("female").style.display = "block";
   }
   document.getElementById("details-container").style.display = "block";
+
   document.getElementById("details-container").innerHTML = `
             <div class="card border shadow-lg p-4 my-4 bg-secondary bg-gradient text-white">
             <div class="pro-pic">
